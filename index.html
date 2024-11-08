@@ -1,131 +1,84 @@
-<!--Chat bot for website-->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stylish Chat Bot</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-           
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
 
-        .chat-container {
-            width: 350px;
-            background-color: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .chat-box {
-            flex-grow: 1;
-            overflow-y: auto;
-            padding: 20px;
-            border-bottom: 1px solid #ddd;
-        }
-
-        .message {
-            margin: 10px 0;
-            padding: 10px 15px;
-            border-radius: 20px;
-            max-width: 80%;
-            word-wrap: break-word;
-            display: inline-block;
-        }
-
-        .message.bot {
-            background-color: #e1f5fe;
-            color: #0277bd;
-            align-self: flex-start;
-        }
-
-        .message.user {
-            background-color: #c8e6c9;
-            color: #2e7d32;
-            align-self: flex-end;
-        }
-
-        input[type="text"] {
-            flex-grow: 1;
-            padding: 15px;
-            border: none;
-            border-top: 1px solid #ddd;
-            outline: none;
-        }
-
-        button {
-            width: 70px;
-            padding: 15px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            cursor: pointer;
-            border-top: 1px solid #ddd;
-        }
-
-        button:hover {
-            background-color: #0056b3;
-        }
-
-        .input-container {
-            display: flex;
-            border-top: 1px solid #ddd;
-        }
-    </style>
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1 style="text-align:center;">Bharat Chat</h1>
-    <h6 style="text-align: center ">Developed by Harsh</h6>
-    <div class="chat-container">
-        <div class="chat-box" id="chat-box"></div>
-        <div class="input-container">
-            <input type="text" id="user-input" placeholder="Type a message..." onkeypress="handleKeyPress(event)">
-            <button onclick="sendMessage()">Send</button>
-        </div>
+    <div class="header1">
+        <img src="data:image/png;base64,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" width="100px" height="75px" style="margin-left: 6%;">
+        <input type="text" placeholder="Search here..." name="search" class="search">
+        <button class="button1">Login</button>
+    </div><br><br><br>
+    <ul>
+        <li><a href="#1" class="a1">HOME</a></li>
+        <li><a href="#2" class="a1">SERVICES</a></li>
+        <li><a href="#3" class="a1">SHOPPING</a></li>
+        <li><a href="#5" class="a1">CART</a></li>
+    </ul><br><br>
+    <div class="main0">
+        <h1 class="h1">
+            WELCOME {User-name} TO KHHaS SERVICES.
+        </h1>
+        <h3 class="h2">
+            HOW MAY I HELP YOU?
+        </h3>
     </div>
-    <script>
-        const responses = {
-            "hi": "Hello! How can I assist you today?",
-            "hello": "Hi there! How can I help you?",
-            "how are you": "I'm just a bot, but I'm here to help you!",
-            "what is your name": "I am a simple chat bot created for this example.",
-            "bye": "Goodbye! Have a nice day!"
-        };
-
-        function sendMessage() {
-            const inputField = document.getElementById('user-input');
-            const message = inputField.value.toLowerCase();
-            addMessage(message, 'user');
-            inputField.value = '';
-
-            const response = responses[message] || "I'm sorry, I don't understand that.";
-            setTimeout(() => addMessage(response, 'bot'), 500);
-        }
-
-        function addMessage(text, sender) {
-            const chatBox = document.getElementById('chat-box');
-            const messageElement = document.createElement('div');
-            messageElement.classList.add('message', sender);
-            messageElement.textContent = sender.charAt(0).toUpperCase() + sender.slice(1) + ': ' + text;
-            chatBox.appendChild(messageElement);
-            chatBox.scrollTop = chatBox.scrollHeight;
-        }
-
-        function handleKeyPress(event) {
-            if (event.key === 'Enter') {
-                sendMessage();
-            }
-        }
-    </script>
+    <h1 style="text-align: center; color: white;">Here are the Services We Provide, Only for you!!!</h1>
+    <br><div class="main1">
+        <a href="#" class="a2" id="links"></a>
+        <a href="#" class="a3" id="links"></a>
+        <a href="#" class="a4" id="links"></a>
+        <a href="#" class="a5" id="links"></a>
+        <a href="#" class="a6" id="links"></a>
+        <a href="#" class="a7" id="links"></a>
+    </div><br>
+    <div class="main1">
+        <a href="#1" class="a8" id="links"></a>
+        <a href="#1" class="a9" id="links"></a>
+        <a href="#1" class="a10" id="links"></a>
+        <a href="#1" class="a11" id="links"></a>
+        <a href="#1" class="a12" id="links"></a>
+        <a href="#1" class="a13" id="links"></a>
+    </div><br>
+    <div class="main1">
+        <a href="#1" class="a14" id="links"></a>
+        <a href="#1" class="a15" id="links"></a>
+        <a href="#1" class="a16" id="links"></a>
+        <a href="#1" class="a17" id="links"></a>
+        <a href="#1" class="a18" id="links"></a>
+        <a href="#1" class="a19" id="links"></a>
+    </div>
+    <div class="main2">
+        <a><img src="https://d2dgt4tr79mk87.cloudfront.net/manufacturer/Ababeel-Leathers-185x88.png"></a>
+        <a><img src="https://d2dgt4tr79mk87.cloudfront.net/manufacturer/2017-10-12-185x88.png"></a>
+        <a><img src="https://d2dgt4tr79mk87.cloudfront.net/manufacturer/afterscake-removebg-preview.png"></a>
+        <a><img src="https://allcare3mstores.com/wp-content/uploads/2021/11/allcare-new.jpg"></a>
+    </div>
+    <div class="main3">
+        <h1 style="text-align: center; color: white;">Why Choose KHHaS?</h1><br>
+        <ul type="disc" style="display: table-column;">
+            <li>On Demand Scheduled</li>
+            <li>Verified Partners</li>
+            <li>Service Warranty</li>
+            <li>Online Payments</li>
+            <li>24/7 Online Support</li>
+        </ul>
+    </div>
+    <h2 style="text-align: center; color: white; font-size: 45px;">
+        Hire Professional Home Service Experts in Delhi
+    </h2><hr>
+    <p style="color: white; font-size: 22px; padding: 15px; text-align: justify;">
+        Delhi is the capital of India and having most populated cities as well here people are leaving from different part of the country. Delhi is the most historical city as and busiest city as well. Their many monuments to watch. Here most of the people come from different part of country from Job and earning the money. After moving here with family or alone need to be settling required a lot of home service so we can easily settle in the city.<br><br>
+        When we are new in the city need reliable and quick hiring source of home need service so we can avail the service with reasonable cost and good service from professional of home service provider in Delhi.<br><br>
+        Here <b>KHHaS</b> is the platform have service provider register there.<b>KHHaS</b> register professional on the platform check with last experience had by professional and quality team check the work quality of professional so customer will get good experience with professional home service providers in Delhi. <b>KHHaS</b> have easy process as well to hire the professional through the platform. Below is the mention of the <b>KHHaS</b> process to hire the professional. <br><br>
+        Choose the home service what you need as per the requirement its very easy to navigate on city Delhi.<br>
+        After choosing the required services go head and choose your location in Delhi, where you need the service so <b>KHHas</b> on the basis of your location fetch the nearest professional so you can get service instantly with relevant cost.<br>
+        After putting the location you need to put your personal details so professional can reach easily and fix schedule with you for the service you need.<br><br><br>
+    </p>
+    <footer>
+        <p>Copyright &#169 KHaaS Services <script>document.write(new Date().getFullYear());</script></p>
+    </footer>
 </body>
-</html>
+    </html>
