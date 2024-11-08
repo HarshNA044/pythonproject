@@ -2,11 +2,15 @@ body {
     font-family: sans-serif;
     background-color: #180161;
 }
+div{
+    margin: 2%;
+}
 div.header1 {
     width: 100%;
     top: 0;
+    left: 0;
     margin: 0;
-    background-color: #4f1787;
+    background-color: #1b54fd;
     color: #fff;
     position: fixed;
     z-index: 100;
@@ -21,6 +25,7 @@ ul {
     box-shadow: 0 2px 4px rgba(200, 200, 200, 0.2);
     overflow-x: auto; 
     padding: 0;
+    left: 0;
     white-space: nowrap;
     margin: 0;
     display: flex;
@@ -64,18 +69,16 @@ ul li {
     margin-left: 30%;
     padding: 0px 10px 0px 10px;
     text-align: center;
-    border: 2px solid #ffbe3b;
+    border: 2px solid #f60606;
 }
 .a1 {
     background-color: #ffbe3b;
     color: #000;
-    margin: 75px;
-    font-weight: bold;
     font-size: 20px;
     text-decoration: none;
 }
 div.main0 {
-    margin: 0;
+    left: 0;
 }
 div.main1 {
     width: 100%;
@@ -86,10 +89,8 @@ div.main1 {
     box-shadow: 0px 0px 25px rgb(15, 252, 190)
 }
 #links {
-    height: 200px;
-    width: 200px;
-    padding: 0px 0px 5px 0px;
-    margin: 10px 0px 10px 0px;
+    width: auto;
+    margin: 2%;
     border-radius: 10px;
 }
 #links:hover {
@@ -98,78 +99,6 @@ div.main1 {
     padding: 5px 0px 5px 0px;
     margin: 10px 0px 10px 0px;
     transition: all 1s ease-in-out ;
-}
-.a2 {
-    background-image: url(ac.jpg);
-    background-size: cover;
-}
-.a3 {
-    background-image: url(bathtub.jpg);
-    background-size: cover;
-}
-.a4 {
-    background-image: url(car.jpg);
-    background-size: cover;
-}
-.a5 {
-    background-image: url(carpet.jpg);
-    background-size: cover;
-}
-.a6 {
-    background-image: url(chair.jpg);
-    background-size: cover;
-}
-.a7 {
-    background-image: url(chimney.jpg);
-    background-size: cover;
-}
-.a8 {
-    background-image: url(deep_cleaning.jpg);
-    background-size: cover;
-}
-.a9 {
-    background-image: url(electrician.jpg);
-    background-size: cover;
-}
-.a10 {
-    background-image: url(fridge.jpg);
-    background-size: cover;
-}
-.a11 {
-    background-image: url(geyser.jpg);
-    background-size: cover;
-}
-.a12 {
-    background-image: url(sanitization.jpg);
-    background-size: cover;
-}
-.a13 {
-    background-image: url(kitchen.jpg);
-    background-size: cover;
-}
-.a14 {
-    background-image: url(mattress.jpg);
-    background-size: cover;
-}
-.a15 {
-    background-image: url(microwave.jpg);
-    background-size: cover;
-}
-.a16 {
-    background-image: url(sofa.jpg);
-    background-size: cover;
-}
-.a17 {
-    background-image: url(plumber.jpg);
-    background-size: cover;
-}
-.a18 {
-    background-image: url(washing\ machine.jpg);
-    background-size: cover;
-}
-.a19 {
-    background-image: url(water\ tank.jpg);
-    background-size: cover;
 }
 div.main2 {
     height: 250px;
@@ -187,25 +116,8 @@ div.main3 {
 }
 li {
     display: inline;
-    margin:25px;
     font-size: 35px;
     color: #0FFCBE;
-}
-#myVideo {
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: -1;
-}
-.h1 {
-    font-size: 50px;
-    padding-left: 75px;
-    color: white;
-}
-.h2 {
-    font-size: 65px;
-    padding-left: 75px;
-    color:#0FFCBE;
 }
 footer {
     text-align: center;
