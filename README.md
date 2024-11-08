@@ -1,3 +1,3 @@
 [`Visit
-Website`](https://harshna044.github.io/mybot/)
+Website`](https://harshna044.github.io/pythonproject/)
 # mybot
