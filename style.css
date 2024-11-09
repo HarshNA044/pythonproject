@@ -1,5 +1,5 @@
 body {
-    font-family: sans-serif;
+    font-family: 'Times', sans-serif;
     background-color: #180161;
 }
 div{
@@ -7,6 +7,7 @@ div{
 }
 div.header1 {
     width: 100%;
+    border-bottom: 0;
     top: 0;
     left: 0;
     margin: 0;
@@ -16,16 +17,20 @@ div.header1 {
     z-index: 100;
     display: flex;
     align-items: center;
+    padding: 0;
 }
 ul {
     background-color: #ffbe3b;
     position: fixed;
     z-index: 100;
     width: 100%;
+    top: 75px;
     box-shadow: 0 2px 4px rgba(200, 200, 200, 0.2);
     overflow-x: auto; 
     padding: 0;
+    border-top: 0;
     left: 0;
+    justify-content: space-evenly;
     white-space: nowrap;
     margin: 0;
     display: flex;
@@ -41,14 +46,14 @@ ul li {
     display: inline-block;
     padding: 0.08em 0.4em;
     color: #000;
-    margin: 0 auto;
     white-space: nowrap;
     
 }
 .button1 {
     font-size:20px;
-    margin-left: 30%;
-    border-radius: 10px;
+    right: 20px;
+    position: absolute;
+    border-radius: 8px;
     border:2px solid #0FFCBE;
     background-color: #0FFCBE;
     color: #106EBE;
@@ -66,7 +71,8 @@ ul li {
     background-color: white;
     color: #106EBE;
     font-size: 18px;
-    margin-left: 30%;
+    position: absolute;
+    left: 390px;
     padding: 0px 10px 0px 10px;
     text-align: center;
     border: 2px solid #f60606;
@@ -78,50 +84,52 @@ ul li {
     text-decoration: none;
 }
 div.main0 {
-    left: 0;
+    background-color: #ddd;
+    padding: 10px;
+    position: relative;
+    margin-left: 0;!important
+    margin-right: 0;!important
 }
 div.main1 {
     width: 100%;
     background-color: white;
     display: flex;
-    justify-content: space-evenly;
+    margin: 0 auto;
     border-radius: 25px;
+    justify-content: space-evenly;
     box-shadow: 0px 0px 25px rgb(15, 252, 190)
 }
 #links {
-    width: auto;
-    margin: 2%;
-    border-radius: 10px;
+    height: 150px;
+    width: 150px;
+    border-radius: 25px;
 }
 #links:hover {
-    height: 200px;
-    width: 200px;
+    height: 160px;
+    width: 160px;
     padding: 5px 0px 5px 0px;
-    margin: 10px 0px 10px 0px;
     transition: all 1s ease-in-out ;
 }
 div.main2 {
-    height: 250px;
     width: 100%;
     display: flex;
+    color: #fff;
     justify-content: space-evenly;
-    align-items: center;
 }
 div.main3 {
-    height: 250px;
-    width: 100%;
+    padding: 10px;
+    width: auto;
+    color: #fff;
     background-color: #0e5a9c;
-    display: inline-block;
-    justify-content: space-evenly;
 }
-li {
-    display: inline;
-    font-size: 35px;
-    color: #0FFCBE;
+.myol {
+    color: #fff;
+    text-align: center;
 }
 footer {
     text-align: center;
     background-color: #333;
     color: #fff;
     padding: 10px;
+    position: relative;
 }
