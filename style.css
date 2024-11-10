@@ -199,16 +199,10 @@ footer {
     padding: 10px;
 }
 
-.main1 img, .main2 img {
-    max-width: 100px;
-    margin: 10px;
-    border-radius: 25px;
-    transition: transform 0.3s;
-}
-
-.main1 img:hover, .main2 img:hover {
-    transform: scale(1.1);
-}
+.main1 {
+    max-width: 30px;
+    max-height: 30px;
+    justify-content: space-evenly;
 }
 
 @media (max-width: 480px) {
