@@ -164,3 +164,87 @@ footer {
     padding: 10px;
     position: relative;
 }
+@media (max-width: 768px) {
+    .header1 {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .search {
+        width: 100%;
+        left: 0;
+        margin: 10px 0;
+    }
+    .button1 {
+        position: relative;
+        margin-top: 10px;
+    }
+    ul {
+        top: auto;
+        width: 100%;
+        flex-direction: column;
+    }
+    ul li {
+        display: block;
+        padding: 10px;
+        text-align: center;
+    }
+    .main0 h1 {
+        font-size: 24px;
+        text-align: center;
+    }
+    .main1 {
+        flex-wrap: wrap;
+    }
+    .main1 img {
+        width: 100px;
+        height: 100px;
+    }
+    .main2 img {
+        width: 100px;
+        height: auto;
+        margin: 10px;
+    }
+    .main3 h1, .main3 ol {
+        font-size: 18px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .header1 img {
+        width: 80px;
+        height: 60px;
+        margin: 0 auto;
+    }
+    .search {
+        width: 90%;
+        margin: 10px auto;
+    }
+    .button1 {
+        width: 90%;
+        text-align: center;
+        margin: 10px auto;
+    }
+    .main1 {
+        flex-direction: column;
+    }
+    .main1 img {
+        width: 90%;
+        height: auto;
+        margin: 10px auto;
+    }
+    .typing {
+        font-size: 18px;
+    }
+    footer {
+        font-size: 14px;
+        padding: 20px 10px;
+    }
+    footer img {
+        width: 70px;
+        height: auto;
+    }
+    footer p, footer h3 {
+        text-align: center;
+    }
+    }
