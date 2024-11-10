@@ -11,7 +11,7 @@ div.header1 {
     top: 0;
     left: 0;
     margin: 0;
-    background-color: #1b54fd;
+    background-color: #4f1787;
     color: #fff;
     position: fixed;
     z-index: 100;
@@ -20,7 +20,7 @@ div.header1 {
     padding: 0;
 }
 ul {
-    background-color: #ffbe3b;
+    background-color: #fcd71f;
     position: fixed;
     z-index: 100;
     width: 100%;
@@ -41,7 +41,7 @@ ul {
 }
 
 ul li {
-    background-color: #ffbe3b;
+    background-color: #fcd71f;
     flex: 0 0 auto;
     display: inline-block;
     padding: 0.08em 0.4em;
@@ -49,19 +49,46 @@ ul li {
     white-space: nowrap;
     
 }
+.typing {
+    left: 6%;
+    color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    animation: typewriter 3s steps(13) infinite alternate, blink 800ms steps(13) infinite normal;
+    border-right: 5px solid black;
+}
+@keyframes typewriter {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 240px;
+    }
+}
+@keyframes blink {
+    from {
+        border-color: #ae95ff;
+    }
+    to {
+        border-color: transparent;
+    }
+}
 .button1 {
     font-size:20px;
     right: 20px;
     position: absolute;
     border-radius: 8px;
-    border:2px solid #0FFCBE;
-    background-color: #0FFCBE;
-    color: #106EBE;
+    background: linear-gradient(135deg, #180161,#4f1787, #eb3678, #fb773c);
+    color: #ffffff;
+    text-decoration: none;
+    border: 1px solid #fff;
     padding: 8px 12px 8px 12px;
 }
 .button1:hover {
-    background-color: #106EBE;
-    color: #0FFCBE;
+    background: #fff;
+    border: 0;
+    color: #180161;
     transition: all 0.5s ease-in-out 0.2s;
 }
 .search {
@@ -72,23 +99,23 @@ ul li {
     color: #106EBE;
     font-size: 18px;
     position: absolute;
-    left: 390px;
+    left: 500px;
     padding: 0px 10px 0px 10px;
     text-align: center;
-    border: 2px solid #f60606;
+    border: 2px solid #fcd71f;
 }
 .a1 {
-    background-color: #ffbe3b;
+    background-color: #fcd71f;
     color: #000;
     font-size: 20px;
     text-decoration: none;
 }
 div.main0 {
-    background-color: #ddd;
+    justify-content: center;
+    background: linear-gradient(135deg, #af96fe,#ff5895, #f6fc58);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
     padding: 10px;
-    position: relative;
-    margin-left: 0;!important
-    margin-right: 0;!important
 }
 div.main1 {
     width: 100%;
@@ -120,7 +147,11 @@ div.main3 {
     padding: 10px;
     width: auto;
     color: #fff;
-    background-color: #0e5a9c;
+    border: 1px solid white;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #180161,#4f1787, #eb3678, #fb773c);
+    margin-left: 0;!important
+    margin-right: 0;!important
 }
 .myol {
     color: #fff;
@@ -128,8 +159,8 @@ div.main3 {
 }
 footer {
     text-align: center;
-    background-color: #333;
-    color: #fff;
+    background: linear-gradient(135deg,#f5d019,#f6e602);
+    color: #000000;
     padding: 10px;
     position: relative;
 }
