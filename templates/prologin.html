@@ -1,0 +1,106 @@
+<html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Login</title>
+    <style>
+        body {
+            background-color: #180161;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        form {
+            background-color: rgba(40, 46, 86, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            width: 300px;
+            text-align: left;
+            border: 0.5px solid white;
+        }
+
+        .form-header {
+            text-align: center;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        label {
+            font-weight: bold;
+            width: 80px;
+            margin-right: 10px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="address"],
+        input[type="pincode"] {
+            flex: 1;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+
+        button {
+            background: linear-gradient(135deg, #180161, #4f1787, #eb3678, #fb773c);
+            color: white;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        a {
+            color: #7ed2ff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Login Form -->
+    <h1>A TO Z Household Services</h1>
+    <form method = 'POST' , action='/pro-login'>
+        <div class="form-group">
+        <label for="login-email">Email:</label><br><input type="email" id="email" name="email" required><br><br></div>
+        
+        <div class="form-group"><label for="login-password">Password:</label><br>
+        <input type="password" id="password" name="password" required><br><br></div>
+        
+        <button type="submit">Login</button>
+    </form><br>
+    <a style="padding: 8px 12px; background-color: yellow; border-radius: 20px; box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.3); color: black;" href = "/proregister"> Create Account as professional</a><br>
+    <a href = "/customer-register"> Register as customer</a>
+</body>
+</html>
