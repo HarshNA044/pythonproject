@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Signup</title>
+    <style>
+        body {
+            background-color: #180161;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        form {
+            background-color: rgba(40, 46, 86, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            width: 300px;
+            text-align: left;
+            border: 0.5px solid white;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="number"],
+        input[type="address"],
+        input[type="pincode"] {
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid black;
+            box-sizing: border-box;
+            width: 100%;
+        }
+
+        select,
+        input[type="file"] {
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid black;
+            width: 100%;
+        }
+
+        button {
+            background: linear-gradient(135deg, #180161, #4f1787, #eb3678, #fb773c);
+            color: white;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        a {
+            color: #7ed2ff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Signup Form -->
+    <form method="POST" action="/proregister">
+        <h1>Signup for Service Professional</h1>
+        
+        <div class="form-group">
+            <label for="signup-name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="signup-email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="signup-password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+
+        <div class="form-group">
+            <label for="Servicename">Service name:</label>
+            <select id="Servicename" name="Servicename">
+                <option value="Consultation">Consultation</option>
+                <option value="jhadupocha">jhadu pocha</option>
+                <option value="sewageclean">latrine saaf krta hu</option>
+                <option value="Training">Training</option>
+                <option value="Support">Support</option>
+                <option value="Installation">Installation</option>
+            </select>
+        </div>
+    
+        <div class="form-group">
+            <label for="experience">Experience (in yrs):</label>
+            <input type="number" id="experience" name="experience" min="0">
+        </div>
+    
+        <div class="form-group">
+            <label for="Attachdoc">Attach documents:</label>
+            <input type="file" id="Attachdoc" name="Attachdoc" accept=".pdf, .doc, .docx, .jpg, .png">
+        </div>
+
+        <div class="form-group">
+            <label for="address">Address:</label>
+            <input type="address" id="address" name="address">
+        </div>
+
+        <div class="form-group">
+            <label for="pincode">Pincode:</label>
+            <input type="pincode" id="pincode" name="pincode">
+        </div>
+
+        <button type="submit">Signup</button>
+    </form>
+</body>
+</html>
