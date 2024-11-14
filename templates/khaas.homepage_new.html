@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar</title>
+    <style>
+        /* General body styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navigation bar styling */
+        nav {
+            background-color: rgba(147, 53, 255, 0.315);
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between; 
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        nav h4 {
+            margin: 0;
+            font-size: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 20px;
+        }
+        li {
+            display: inline;
+        }
+        a {
+            color: #f0f0f0;
+            text-decoration: none;
+            padding: 5px 15px;
+            transition: color 0.3s ease, background-color 0.3s ease;
+        }
+        a:hover {
+            color: #222;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+        }
+
+        /* Marquee styling */
+        .marquee1 {
+            background-color: #555;
+            padding: 10px;
+            font-weight: bold;
+            color: #ffce00;
+            border-bottom: 2px solid #333;
+        }
+
+        /* Main heading and sections styling */
+        .main0, .main1, .main2, .main3 {
+            text-align: center;
+            margin: 30px 20px;
+        }
+        .main0 h1, .main0 h2 {
+            font-weight: bold;
+            color: #ffce00;
+            text-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+        }
+
+        /* Service links styling */
+        .main1 a {
+            display: inline-block;
+            margin: 10px 15px;
+            color: #ffce00;
+            font-weight: bold;
+            text-decoration: none;
+            border: 2px solid transparent;
+            padding: 10px 15px;
+            transition: color 0.3s, border-color 0.3s, transform 0.3s;
+            border-radius: 8px;
+        }
+        .main1 a:hover {
+            color: #fff;
+            border-color: #ffce00;
+            transform: scale(1.05);
+        }
+
+        /* Partner logos styling */
+        .main2 img {
+            width: 150px;
+            margin: 20px;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .main2 img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Why Choose section styling */
+        .main3 h1 {
+            color: #ffce00;
+            font-size: 28px;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+        }
+        .main3 ul {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 0;
+            text-align: center;
+            font-size: 18px;
+        }
+        .main3 li {
+            background: linear-gradient(135deg, #ff9a00, #ff2d00);
+            color: #f0f0f0;
+            margin: 10px 0;
+            padding: 10px 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
+        }
+        .main3 li:hover {
+            background-color: #555;
+        }
+
+        /* Call-to-Action heading */
+        h2 {
+            text-align: center;
+            font-size: 45px;
+            color: #ffce00;
+            margin-top: 30px;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h4>Welcome {{ user.name }}</h4>
+        <ul>
+            <li><a href="/homepage">Home</a></li>
+            <li><a href="/search">Search</a></li>
+            <li><a href="/summary">Summary</a></li>
+            <li><a href="/logout">Logout</a></li>
+            <li><a href="/profile">Profile</a></li>
+        </ul>
+    </nav>
+    
+
+    <marquee class="marquee1">Join KHHaS for getting better deals and discounts on the Services.</marquee>
+    <div class="main0">
+        <h1>HELLO USER! WELCOME TO KHHaS SERVICES.</h1>
+        <h2>HOW MAY I HELP YOU?</h2>
+    </div>
+
+    <div class="main1" id="main1">
+        <h3 id="main1Title"> Looking for?</h3>
+
+        <a href="#" onclick="updateContent('AC Repair', 'Details about AC Repair...','1000','5 Star')" class="a2">AC Repair</a>
+        <a href="#" onclick="updateContent('Saloon', 'Details about Saloon services...','1000','5 Star')" class="a3">Saloon</a>
+        <a href="#" onclick="updateContent('Cleaning', 'Full home Cleaning services ','1000','5 Star')" class="a4">Cleaning</a>
+        <a href="#" onclick="updateContent('Electrician', 'Details about Electrician services...','1000','5 Star')" class="a5">Electrician</a>
+        <a href="#" onclick="updateContent('Service 5', 'Details about Service 5...','1000','5 Star')" class="a6">Service 5</a>
+        <a href="#" onclick="updateContent('Service 6', 'Details about Service 6...','1000','5 Star')" class="a7">Service 6</a>
+    </div>
+
+    <div class="main2">
+        <a href="#"><img src="https://d2dgt4tr79mk87.cloudfront.net/manufacturer/Ababeel-Leathers-185x88.png" alt="Ababeel Leathers"></a>
+        <a href="#"><img src="https://d2dgt4tr79mk87.cloudfront.net/manufacturer/2017-10-12-185x88.png" alt="Manufacturer 2"></a>
+        <a href="#"><img src="https://d2dgt4tr79mk87.cloudfront.net/manufacturer/afterscake-removebg-preview.png" alt="After Scake"></a>
+        <a href="#"><img src="https://allcare3mstores.com/wp-content/uploads/2021/11/allcare-new.jpg" alt="Allcare"></a>
+    </div>
+    
+    <div class="main3">
+        <h1>Why Choose KHHaS?</h1>
+        <ul>
+            <li>On Demand Scheduled</li>
+            <li>Verified Partners</li>
+            <li>Service Warranty</li>
+            <li>Online Payments</li>
+            <li>24/7 Online Support</li>
+        </ul>
+    </div>
+    
+    <h2 style="text-align: center; font-size: 45px;">
+        Hire Professional Home Service Experts in Delhi
+    </h2>
+
+    <script>
+        function updateContent(title, details, price, ratings) {
+            document.getElementById('main1Title').innerText = title;
+            document.getElementById('main1').innerHTML = `
+                <h3 id="main1Title">${title}</h3>
+                <p>${details}  Price: ${price} Rating: ${ratings} 
+                    <br> <br> <button> Book now </button> </p>
+                <H1>
+        <a href="#" onclick="updateContent('AC Repair', 'Details about AC Repair...','1000','5 Star')" class="a2">AC Repair</a>
+        <a href="#" onclick="updateContent('Saloon', 'Details about Saloon services...','1000','5 Star')" class="a3">Saloon</a>
+        <a href="#" onclick="updateContent('Cleaning', 'Full home Cleaning services... ','1000','5 Star')" class="a4">Cleaning</a>
+        <a href="#" onclick="updateContent('Electrician', 'Details about Electrician services...','1000','5 Star')" class="a5">Electrician</a>
+        <a href="#" onclick="updateContent('Service 5', 'Details about Service 5...','1000','5 Star')" class="a6">Service 5</a>
+        <a href="#" onclick="updateContent('Service 6', 'Details about Service 6...','1000','5 Star')" class="a7">Service 6</a>
+        </H1>
+            `;
+        }
+    </script>
+</body>
+</html>
