@@ -18,7 +18,7 @@
             position: fixed;
             top: 0;
             left: 0;
-            margin: 0;!important
+            margin: 0 !important;
             z-index: 100;
             display: flex;
             align-items: center;
@@ -59,6 +59,58 @@
             border-radius: 8px;
             padding: 3px;
         }
+        div ul {
+            display: flex;
+            list-style-type: none;
+            justify-content: space-between;
+            margin: 2%;
+        }
+        div ul li {
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            padding: 1%;
+            height: 150px;
+            width: 150px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .popup {
+            width: 400px;
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+        }
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+        div ol li {
+            justify-content: flex-end;
+            margin: 10px 0;
+            font-size: 1rem;
+        }
+        div ol li button {
+            padding: 3px 15px;
+            background: linear-gradient(135deg, #180161,#4f1787, #eb3678, #fb773c);
+            border-radius: 3px;
+            color:#fff;
+            float: right;
+            border: 0;
+        }
     </style>
 </head>
 <body>
@@ -74,6 +126,33 @@
    </nav><br><br><br><br>
    <div>
        <center><h3>Looking For ?</h3></center>
+       <ul>
+        <li onclick="openPopup()">AC Repair</li>
+        <li onclick="openPopup()">Saloon</li>
+        <li onclick="openPopup()">Cleaning</li>
+        <li onclick="openPopup()">Electrician</li>
+       </ul>
    </div>
+   <div class="overlay" id="overlay"></div>
+   <div class="popup" id="popup">
+       <h2>Best Cleaning Packages</h2>
+       <ol>
+        <li>Full home Cleaning services<a href="#"><button>Book</button></a></li>
+        <li>Toilet Cleaning services<a href="#"><button>Book</button></a></li>
+        <li>Kitchen Cleaning services<a href="#"><button>Book</button></a></li>
+        <li>Sofa Cleaning services<a href="#"><button>Book</button></a></li>
+       </ol>
+   </div>
+   <script>
+        function openPopup() {
+            document.getElementById('popup').style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+        }
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        }
+        document.getElementById('overlay').addEventListener('click', closePopup);
+   </script>
 </body>
 </html>
